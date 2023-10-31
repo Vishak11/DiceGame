@@ -171,3 +171,10 @@ main {
 .hidden{
     display: none;
 }
+h2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 20px;
+  cursor: pointer;
+}
