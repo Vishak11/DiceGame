@@ -27,6 +27,10 @@ const newGame = () => {
     player0E2.classList.remove('player--winner')
     player0El.classList.add('player--active')
     player0E2.classList.remove('player--active')
+    document.getElementById('name--0').textContent="Player 1"
+    document.getElementById('name--1').textContent="Player 2"
+    btnRoll.disabled = false
+    btnHold.disabled = false
 
 }
 newGame()
@@ -67,7 +71,8 @@ btnHold.addEventListener('click', function () {
     score[activePlayer] += currentScore
     document.getElementById(`score--${activePlayer}`).textContent = score[activePlayer]
 
-    if (score[activePlayer] >= 100) {
+    if (score[activePlayer] >= 10) {
+        document.getElementById(`name--${activePlayer}`).textContent="Winner..."
         document.querySelector(`.player--${activePlayer}`).classList.add('player--winner')
         document.querySelector(`.player--${activePlayer}`).classList.remove('player--active')
         // document.getElementById(`name--${activePlayer}`).textContent = "Winner!!!!!"
